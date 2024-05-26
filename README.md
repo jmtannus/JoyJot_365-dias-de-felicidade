@@ -1,4 +1,5 @@
-# JOYJOT 365-dias-de-felicidade 🌻
+# JOYJOT 
+## *365-dias-de-felicidade* 🌻
 
 Building a fully responsive modern website in ReactJS using Tailwind CSS and Vite, with the functionality to allow users to register, enter and edit messages, and view these messages in a calendar format, involves several steps. Here's a step-by-step guide to help you through the process:
 
@@ -73,6 +74,12 @@ Citations:
 [2] https://www.youtube.com/watch?v=22CxRxryQFE
 [3] https://tailwindcss.com/docs/guides/vite
 [4] https://www.youtube.com/watch?v=GDd2c70gsxE
+
+<!-- A palavra “jot” tem dois significados principais em inglês:
+
+Como substantivo, “jot” significa uma quantidade muito pequena. Por exemplo, “you didn’t care a jot” significa que você não se importou nem um pouco1.
+Como verbo, “jot” significa escrever rapidamente ou fazer uma anotação breve. Por exemplo, “jot down” é uma expressão que significa anotar algo rapidamente1.
+Portanto, no contexto do nome “JoyJot” para o seu aplicativo, “jot” sugere a ideia de capturar rapidamente pequenas notas ou momentos de alegria. É uma palavra que transmite a facilidade e a rapidez com que alguém pode registrar os momentos felizes do dia. -->
 [5] https://medium.com/@mason.aviles.dev/simple-easy-vite-js-react-js-tailwind-css-tutorial-with-data-fetching-d8c26ec95f03
 [6] https://www.youtube.com/watch?v=NzSIqY3c-tk
 [7] https://www.freecodecamp.org/news/how-to-install-tailwindcss-in-react/
