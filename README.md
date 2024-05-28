@@ -1,4 +1,5 @@
-# JOYJOT 
+<img src="https://github.com/jmtannus/JoyJot_365-dias-de-felicidade/assets/61756665/c007af2c-b879-43ca-a515-59b1bac33edc" width="200" height="200" />
+
 ## *365-dias-de-felicidade* 🌻
 
 Building a fully responsive modern website in ReactJS using Tailwind CSS and Vite, with the functionality to allow users to register, enter and edit messages, and view these messages in a calendar format, involves several steps. Here's a step-by-step guide to help you through the process:
