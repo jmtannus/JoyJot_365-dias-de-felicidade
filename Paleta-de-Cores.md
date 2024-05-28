@@ -11,7 +11,7 @@ Usaremos um tom de amarelo vibrante, como #FFD700 (amarelo dourado) ou #FFC72C (
 
 ## Azul Aventureiro (Adventure Blue): 🌈✨
 O azul simboliza a exploração, o céu e o oceano.
-Escolheremos um azul claro e fresco, como #00AEEF (azul céu) ou #0074D9 (azul royal), para representar a jornada emocionante que Joyjot oferece.
+Escolheremos um azul claro e fresco, como #00AEEF (azul céu) ou #0074D9 (azul royal), para representar a jornada emocionante que JoyJot oferece.
 
 ## Verde Vitalidade (Vitality Green): 🌈✨
 O verde está associado à natureza, crescimento e energia renovável.
