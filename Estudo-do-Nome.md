@@ -1,4 +1,6 @@
-# Joyjot: 
+<img src="https://github.com/jmtannus/JoyJot_365-dias-de-felicidade/assets/61756665/c007af2c-b879-43ca-a515-59b1bac33edc" width="50" height="50" /> 🌟✨🌟✨🌟✨🌟✨🌟✨ <img src="https://github.com/jmtannus/JoyJot_365-dias-de-felicidade/assets/61756665/c007af2c-b879-43ca-a515-59b1bac33edc" width="70" height="70" /> ✨🌟✨🌟✨🌟✨🌟✨🌟 <img src="https://github.com/jmtannus/JoyJot_365-dias-de-felicidade/assets/61756665/c007af2c-b879-43ca-a515-59b1bac33edc" width="50" height="50" />
+
+# Why Joyjot? 
 Uma fusão harmoniosa de alegria e jornada, a marca Joyjot evoca uma sensação de entusiasmo, exploração e descoberta. Vamos explorar o significado por trás dessa marca cativante:
 
 ### Alegria (Joy): 🌟✨
