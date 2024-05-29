@@ -1,1 +1,1 @@
-Closes #3
+Closes #2
