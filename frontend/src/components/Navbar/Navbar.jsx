@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCaretDown } from 'react-icons/fa';
+import { FaCaretDown } from "react-icons/fa";
 
 const NavLinks = [
   {
@@ -20,6 +20,24 @@ const NavLinks = [
   {
     id: 4,
     name: "Contate-nos",
+    link: "/#",
+  },
+];
+
+const DropdownLinks = [
+  {
+    id: 1,
+    name: "Vegetais",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Frutas",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Grãos",
     link: "/#",
   },
 ];
@@ -57,14 +75,29 @@ const Navbar = () => {
                 >
                   <div className="flex items-center gap-[2px] py-2">
                     Dropdown
-                  <span> 
-                    <FaCaretDown className="group-hover:rotate-180 duration-300"/>
-                  </span>
+                    <span>
+                      <FaCaretDown className="group-hover:rotate-180 duration-300" />
+                    </span>
                   </div>
-                  
                 </a>
+                {/* Dropdown section */}
+                <div>
+                  <ul>
+                    {DropdownLinks.map((data) => (
+                      <li>
+                        <a
+                          href="/#"
+                          className="text-xl inline-block w-full rounded-md p-2 hover:bg-primary/20"
+                        >
+                          {data}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </li>
             </ul>
+            {/* Dropdown section and links */}
           </div>
         </div>
       </div>
