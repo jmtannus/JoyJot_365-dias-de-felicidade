@@ -17,7 +17,7 @@ const Hero = () => {
     <>
       <div style={BgStyle} className="relative z-[-1]">
         <div className="container py-16 sm:py-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center min-h-[600px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center min-h-[800px]">
             {/* text-content section */}
             <div className="space-y-7 text-slate-950 order-2 sm:order-1">
               <h1 className="text-5xl">
