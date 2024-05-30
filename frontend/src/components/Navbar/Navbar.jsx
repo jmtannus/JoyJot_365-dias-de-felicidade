@@ -48,7 +48,7 @@ const Navbar = () => {
       <div className="bg-white shadow-md">
         <div className="container flex justify-between py-4 sm:py-3">
           {/* logo section */}
-          <div className="font-bold text-3xl">JoyJot</div>
+          <div className="font-bold text-3xl">JoyJot <span className="text-sm justify-center text-secondary">365 dias de felicidade </span><span className="text-base justify-center text-yellow-400">:)</span></div>
           {/* navlinks section */}
           <div>
             <ul className="flex items-center gap-10">
