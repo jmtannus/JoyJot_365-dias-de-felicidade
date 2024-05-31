@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHeartbeat, FaKissWinkHeart, FaLightbulb, FaGift } from "react-icons/fa";
+import { FaHeartbeat, FaComments , FaLightbulb, FaChild  } from "react-icons/fa";
 
 const Benefits = () => {
   return (
@@ -8,7 +8,7 @@ const Benefits = () => {
         <div className="container">
           {/* heading section */}
           <h1 className="pb-16 tracking-wider text-2xl font-semibold text-dark text-center">
-            {""} Benefícios de Escrever todos os Dias
+            {""} Benefícios de prestar atenção à nossa volta e escrever o que nos fez sorrir, diariamente:
           </h1>
           {/* card section */}
           <div>
@@ -31,7 +31,7 @@ const Benefits = () => {
 
               {/* 2st card */}
               <div className="text-center flex justify-center items-center flex-col gap-1 px-3">
-                <FaKissWinkHeart className="text-5xl text-secondary" />{" "}
+                <FaComments  className="text-5xl text-secondary" />{" "}
                 <p className="text-5xl rotate-90 text-secondary text-center translate-x-5">
                   ...
                 </p>
@@ -63,7 +63,7 @@ const Benefits = () => {
 
               {/* 4st card */}
               <div className="text-center flex justify-center items-center flex-col gap-1 px-3">
-                <FaGift className="text-5xl text-secondary" />{" "}
+                <FaChild  className="text-5xl text-secondary" />{" "}
                 <p className="text-5xl rotate-90 text-secondary text-center translate-x-5">
                   ...
                 </p>

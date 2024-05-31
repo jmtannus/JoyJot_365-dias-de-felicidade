@@ -1,4 +1,5 @@
 import React from "react";
+import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Banner from "./components/Banner/Banner";
@@ -11,6 +12,7 @@ const App = () => {
       <Hero />
       <Banner />
       <Benefits />
+      <About />
     </div>
   );
 };
