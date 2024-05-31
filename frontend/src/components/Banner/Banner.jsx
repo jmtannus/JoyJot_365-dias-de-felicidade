@@ -76,10 +76,14 @@ const Banner = () => {
             </div>
           </div>
 
-        {/* button content section */}
-        <div>
+          {/* button content section */}
+          <div className="flex justify-center mt-10 sm:mt-14">
             <PrimaryButton />
+          </div>
         </div>
+        {/* bg happy icons pngs */}
+        <div>
+            <img src={} alt="" />
         </div>
       </div>
     </>
