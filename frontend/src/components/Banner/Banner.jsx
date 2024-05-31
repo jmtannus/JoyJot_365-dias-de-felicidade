@@ -14,10 +14,72 @@ const Banner = () => {
           <h1 className="py-8 tracking-wider text-2xl font-semibold text-dark text-center">
             Reprograme sua vida! Porque essa técnica funciona?
           </h1>
-          <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10"></div>
-            <p>{""}Nós sabemos disso <span className="text-primary">porque</span></p> passamos por momentos onde não enxergamos 
+
+          {/* text content section */}
+          <div className="space-y-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10">
+              <div>
+                <p>
+                  {""}Nós sabemos disso porque
+                  <span className="text-primary"> testamos e aprovamos</span>!
+                </p>
+                <p>
+                  Passamos por momentos onde não enxergamos algo bom na nossa
+                  vida, onde sentimos um vazio no peito e de repente só o que
+                  fazemos é reclamar de tudo.
+                  {""} Quando estamos assim,{" "}
+                  <span className="text-primary">
+                    {" "}
+                    o alerta vermelho dentro de nós{" "}
+                  </span>
+                  deve ser acionado.{" "}
+                </p>
+                <p>
+                  A prática diária de escrever sobre coisas que nos fizeram
+                  feliz ajuda a criar um hábito de focar no positivo. Isso pode
+                  levar a uma mudança gradual na perspectiva e atitude em
+                  relação à vida. .Escrever sobre suas experiências pode nos
+                  ajudar a processar nossos sentimentos, a entender melhor a nós
+                  mesmos e a nos comunicarmos com os outros.
+                </p>
+              </div>
+              <div></div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10">
+              <div></div>
+              <div>
+                <p>
+                  {""}Nós sabemos disso porque
+                  <span className="text-primary"> testamos e aprovamos</span>!
+                </p>
+                <p>
+                  Passamos por momentos onde não enxergamos algo bom na nossa
+                  vida, onde sentimos um vazio no peito e de repente só o que
+                  fazemos é reclamar de tudo.
+                  {""} Quando estamos assim,{" "}
+                  <span className="text-primary">
+                    {" "}
+                    o alerta vermelho dentro de nós{" "}
+                  </span>
+                  deve ser acionado.{" "}
+                </p>
+                <p>
+                  A prática diária de escrever sobre coisas que nos fizeram
+                  feliz ajuda a criar um hábito de focar no positivo. Isso pode
+                  levar a uma mudança gradual na perspectiva e atitude em
+                  relação à vida. .Escrever sobre suas experiências pode nos
+                  ajudar a processar nossos sentimentos, a entender melhor a nós
+                  mesmos e a nos comunicarmos com os outros.
+                </p>
+              </div>
+            </div>
           </div>
+
+        {/* button content section */}
+        <div>
+            <PrimaryButton />
+        </div>
         </div>
       </div>
     </>
