@@ -49,7 +49,7 @@ const Footer = () => {
             {/* copyright section */}
             <div className="flex justify-between p-4 items-center">
                 <p>@ 2022 TCJ. Todos os direitos reservados</p>
-                <div className="flex itens-center gap-6" >
+                <div className="flex itens-center gap-6">
                     <a href="#">Política de Privacidade</a>
                     <a href="#">Termos & Conditions</a>
                 </div>
