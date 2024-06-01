@@ -24,16 +24,15 @@ const About = () => {
           {/* card section */}
           <div className="bg-white/80 p-10 my-10">
             No coração da nossa marca está uma profissional multifacetada com
-            vasta experiência e habilidades excepcionais em estilismo, design,
+            vasta experiência e habilidades em moda, estilo, design,
             desenvolvimento de programas e terapias inovadoras. Com 47 anos, mãe
-            dedicada de um menino de 12, ela combina paciência, carinho,
+            dedicada de um rapaz de 12, ela combina paciência, carinho,
             criatividade e atenção aos detalhes. Sua abordagem integra moda,
-            tecnologia e bem-estar, apoiada por formações em estilismo, análise
-            e desenvolvimento de programas, além de especializações em
+            tecnologia e bem-estar, apoiada por suas formações além de especializações em
             fullstack, MBA em gerência de marketing e técnicas de programação
             neurolinguística e hipnose. Cada projeto é conduzido com simpatia,
             educação e um toque divertido, refletindo seu compromisso sincero
-            com o bem-estar e a satisfação das pessoas.
+            com o bem-estar e a satisfação de todos que fazem parte do processo.
             <div className="pt-10 flex justify-center">
               <button className="flex justify-center items-center gap-2 bg-primary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 duration-300">
                 <FaUser />

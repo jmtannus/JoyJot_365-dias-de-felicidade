@@ -1,9 +1,9 @@
 import React from "react";
-import Balloons from "../../assets/png/balloons.png";
-import Lifestyle from "../../assets/png/lifestyle.png";
-import Cat from "../../assets/png/cat.png";
-import Laugh_m from "../../assets/png/laugh_m.png";
-import Smiley from "../../assets/png/smiley.png";
+import binoculars from "../../assets/png/binoculars.png";
+import iSeeYou from "../../assets/png/iSeeYou.png";
+import happyDog from "../../assets/png/happyDog.png";
+import dogPen from "../../assets/png/dogPen.png";
+import cat from "../../assets/png/cat.png";
 import PrimaryButton from "./../Shared/PrimaryButton";
 
 const Banner = () => {
@@ -59,20 +59,20 @@ const Banner = () => {
           </div>
         </div>
         {/* bg happy icons pngs */}
-        <div className="absolute top-5 -left-16 sm:bottom-0 sm:left-0 opacity-50 sm:opacity-100">
-            <img src={Balloons} alt="" className="max-w-[160px]"/>
+        <div className="absolute top-6 -left-16 sm:bottom-0 sm:left-0 opacity-50 sm:opacity-100">
+            <img src={binoculars} alt="" className="max-w-[160px]"/>
         </div>
         <div className="absolute -botton-16 -left-16 sm:bottom-0 sm:left-0 opacity-50 sm:opacity-100">
-            <img src={Lifestyle} alt="" className="max-w-[220px]"/>
+            <img src={iSeeYou} alt="" className="max-w-[250px]"/>
         </div>
-        <div className="absolute top-32 -right-16 sm:bottom-0 sm:right-20 opacity-50 sm:opacity-100">
-            <img src={Cat} alt="" className="max-w-[200px]"/>
+        <div className="absolute top-28 -right-16 sm:bottom-0 sm:right-20 opacity-50 sm:opacity-100">
+            <img src={happyDog} alt="" className="max-w-[300px]"/>
         </div>
-        <div className="hidden sm:block absolute bottom-0 right-0">
-            <img src={Laugh_m} alt="" className="max-w-[180px]"/>
+        <div className="hidden sm:block absolute -bottom-5 right-20">
+            <img src={dogPen} alt="" className="max-w-[280px]"/>
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 left-1/3 -translate-x-1/2 opacity-50 sm:opacity-100">
-            <img src={Smiley} alt="" className="max-w-[160px]"/>
+            <img src={cat} alt="" className="max-w-[320px]"/>
         </div>
       </div>
     </>
