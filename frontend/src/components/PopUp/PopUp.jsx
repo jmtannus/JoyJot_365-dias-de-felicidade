@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 
 const PopUp = ({ showPopup, setShowPopup }) => {
@@ -52,6 +53,13 @@ const PopUp = ({ showPopup, setShowPopup }) => {
                 </div>
 
                 {/* social login */}
+                <div className="mt-4">
+                  <p className="text-center">ou entre com: </p>
+                  <div className="flex justify-center gap-2 mt-2">
+                    <FaFacebook className="text-3xl hover:text-blue-500 duration-200"/>
+                    <FaGoogle className="text-3xl hover:text-primary duration-200" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
