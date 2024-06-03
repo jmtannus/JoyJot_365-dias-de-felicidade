@@ -46,9 +46,9 @@ const Footer = () => {
                 <FaPhone className="text-5xl" />
               </div>
               <div>
-                <p>+55 85 99992.0399 - Central de Apoio</p>
-                <p>+55 188 - Centro de Valorização da Vida (CVV)</p>
-                <p>+55 85 196 - Ministério da Saúde - Atendimento às pessoas com transtornos mentais{" "}</p>
+                <p><span className="font-bold">Central de Apoio:</span><br></br>+55 85 99992.0399</p>
+                <p> <span className="font-bold">CVV:</span><br></br>+55 188</p>
+                <p><span className="font-bold">Ministério da Saúde - Atendimento às pessoas com transtornos mentais: </span>+55 85 196{" "}</p>
               </div>
             </div>
           </div>

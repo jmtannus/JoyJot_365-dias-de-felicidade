@@ -9,8 +9,8 @@ const NavLinks = [
   },
   {
     id: 2,
-    name: "Sobre Nós",
-    link: "/#",
+    name: "Sobre",
+    link: "https://buymeacoffee.com/jmtannus",
   },
   {
     id: 3,
@@ -19,25 +19,25 @@ const NavLinks = [
   },
   {
     id: 4,
-    name: "Contate-nos",
-    link: "/#",
+    name: "Contato",
+    link: "https://www.linkedin.com/in/janaina-tannus-58b32229",
   },
 ];
 
 const DropdownLinks = [
   {
-    id: 1,
-    name: "Vegetais",
+    id: 5,
+    name: "Alegria",
     link: "/#",
   },
   {
-    id: 2,
-    name: "Frutas",
+    id: 6,
+    name: "Família",
     link: "/#",
   },
   {
-    id: 3,
-    name: "Grãos",
+    id: 7,
+    name: "Amigos",
     link: "/#",
   },
 ];
@@ -50,7 +50,7 @@ const Navbar = ({ HandlePopup }) => {
           {/* logo section */}
           <div className="font-bold text-3xl">
             JoyJot{" "}
-            <span className="text-sm justify-center text-secondary">
+            <span className=" hidden md:blocktext-sm justify-center text-secondary">
               365 dias de felicidade{" "}
             </span>
             <span className="text-base justify-center text-yellow-400">:D</span>
@@ -62,7 +62,7 @@ const Navbar = ({ HandlePopup }) => {
                 <li key={id}>
                   <a
                     href={link}
-                    className="inline-block
+                    className="hidden sm:inline-block
                     hover:text-primary text-sm
                     font-semibold"
                   >
@@ -72,7 +72,7 @@ const Navbar = ({ HandlePopup }) => {
               ))}
 
               {/* simple dropdown and links */}
-              <li className="cursor-pointer group">
+              <li className="hidden md:block cursor-pointer group">
                 <a
                   href="/#"
                   className="inline-block
@@ -107,7 +107,7 @@ const Navbar = ({ HandlePopup }) => {
               <li>
                 <button
                   onClick={HandlePopup}
-                  className="flex justify-center items-center gap-2 bg-secondary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 duration-300"
+                  className="flex justify-center items-center gap-2 bg-secondary text-base h-[40px] text-white px-2 md:px-5 py-2 hover:scale-105 duration-300"
                 >
                   <FaUser />
                   Minha Conta
