@@ -20,7 +20,7 @@ const Hero = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center min-h-[600px]">
             {/* text-content section */}
             <div className="space-y-7 text-dark order-2 sm:order-1">
-              <h1 className="text-5xl">
+              <h1 data-aos="fade-up" className="text-5xl">
                 {" "}
                 <span className="text-secondary font-cursive text-8xl">
                   Jot
@@ -31,18 +31,18 @@ const Hero = () => {
                 </span>{" "}
                 moments
               </h1>
-              <p className="lg:pr-64 text-slate-950 text-lg">
+              <p data-aos="fade-up" data-aos-delay="300" className="lg:pr-64">
                 Registre os momentos que te fizeram sorrir hoje e sorria
                 quando relembrá-los.
               </p>
 
               {/* button section */}
-              <div>
+              <div data-aos="fade-up" data-aos-delay="500">
                 <PrimaryButton />
               </div>
             </div>
             {/* image section */}
-            <div className="relative z-30 order-1 sm:order-2">
+            <div data-aos="zoom-in" data-aos-delay="500" className="relative z-30 order-1 sm:order-2">
               <img
                 src={HeroImg}
                 alt=""

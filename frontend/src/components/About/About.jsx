@@ -13,7 +13,7 @@ const BgStyle = {
   position: "relative",
 };
 
-const About = () => {
+const About = ({ HandlePopup }) => {
   return (
     <>
       <div style={BgStyle} className="py-14">
@@ -28,15 +28,19 @@ const About = () => {
             desenvolvimento de programas e terapias inovadoras. Com 47 anos, mãe
             dedicada de um rapaz de 12, ela combina paciência, carinho,
             criatividade e atenção aos detalhes. Sua abordagem integra moda,
-            tecnologia e bem-estar, apoiada por suas formações além de especializações em
-            fullstack, MBA em gerência de marketing e técnicas de programação
-            neurolinguística e hipnose. Cada projeto é conduzido com simpatia,
-            educação e um toque divertido, refletindo seu compromisso sincero
-            com o bem-estar e a satisfação de todos que fazem parte do processo.
+            tecnologia e bem-estar, apoiada por suas formações além de
+            especializações em fullstack, MBA em gerência de marketing e
+            técnicas de programação neurolinguística e hipnose. Cada projeto é
+            conduzido com simpatia, educação e um toque divertido, refletindo
+            seu compromisso sincero com o bem-estar e a satisfação de todos que
+            fazem parte do processo.
             <div className="pt-10 flex justify-center">
-              <button className="flex justify-center items-center gap-2 bg-primary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 duration-300">
+              <button
+                onClick={HandlePopup}
+                className="flex rounded-md justify-center items-center gap-2 bg-primary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 duration-300"
+              >
                 <FaUser />
-                My Accont
+                Minha Conta
               </button>
             </div>
           </div>
@@ -46,7 +50,6 @@ const About = () => {
         <div className="absolute top-0 right-0 w-full">
           <img src={Vector} alt="" className="mx-auto" />
         </div>
-
       </div>
     </>
   );

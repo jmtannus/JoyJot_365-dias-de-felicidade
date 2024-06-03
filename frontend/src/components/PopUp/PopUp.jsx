@@ -5,7 +5,7 @@ import { IoCloseOutline } from "react-icons/io5";
 const PopUp = ({ showPopup, setShowPopup }) => {
   return (
     <>
-      {!showPopup && (
+      {showPopup && (
         <div>
           <div
             className="h-screen w-screen fixed top-0 left-0
@@ -45,7 +45,7 @@ const PopUp = ({ showPopup, setShowPopup }) => {
                 {/* login button section */}
                 <div>
                   <button
-                    className="w-full bg-primary text-white py-2 rounded-md"
+                    className="w-full rounded-md flex justify-center items-center gap-2 bg-primary text-lg h-[40px] text-white px-5 py-2 hover:scale-105 duration-300"
                     onClick={() => setShowPopup(false)}
                   >
                     Entrar
