@@ -18,11 +18,11 @@ const About = ({ HandlePopup }) => {
     <>
       <div style={BgStyle} className="py-14">
         <div className="container min-h-[500px] relative z-10">
-          <h1 className="pt-20 tracking-wider text-4xl font-semibold text-white text-center">
+          <h1 data-aos="fade" className="pt-20 tracking-wider text-4xl font-semibold text-white text-center">
             Sobre nós
           </h1>
           {/* card section */}
-          <div className="bg-white/80 p-10 my-10">
+          <div data-aos="fade" data-aos-delay="300"  className="bg-white/80 p-10 my-10">
             No coração da nossa marca está uma profissional multifacetada com
             vasta experiência e habilidades em moda, estilo, design,
             desenvolvimento de programas e terapias inovadoras. Com 47 anos, mãe

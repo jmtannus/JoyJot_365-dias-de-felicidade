@@ -7,11 +7,11 @@ const Benefits = () => {
       <div className="py-14 md:py-28 bg-gray-50">
         <div className="container">
           {/* heading section */}
-          <h1 className="pb-16 tracking-wider text-2xl font-semibold text-dark text-center">
+          <h1 data-aos="fade" data-aos-delay="300" className="pb-16 tracking-wider text-2xl font-semibold text-dark text-center">
             {""} Benefícios de prestar atenção à nossa volta e escrever o que nos fez sorrir, diariamente:
           </h1>
           {/* card section */}
-          <div>
+          <div data-aos="fade">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-14 sm:gap-4">
               {/* 1st card */}
               <div className="text-center flex justify-center items-center flex-col gap-1 sm:gap-2 px-2">
