@@ -1,17 +1,17 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Banner from "./components/Banner/Banner";
-
-import Hero from "./components/Hero/Hero";
-import Footer from "./components/Footer/Footer";
-import About from "./components/About/About";
-import Benefits from "./components/Benefits/Benefits";
-import PopUp from "./components/PopUp/PopUp";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Banner from "./components/Banner/Banner.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import About from "./components/About/About.jsx";
+import Benefits from "./components/Benefits/Benefits.jsx";
+import PopUp from "./components/PopUp/PopUp.jsx";
 
 const App = () => {
   const [showPopup, setShowPopup] = React.useState(false);
   const HandlePopup = () => {
     setShowPopup(true);
+  };
   return (
     <div className="overflow-x-hidden">
       <Navbar />
