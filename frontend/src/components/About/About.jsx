@@ -18,22 +18,24 @@ const About = ({ HandlePopup }) => {
     <>
       <div style={BgStyle} className="py-14">
         <div className="container min-h-[500px] relative z-10">
-          <h1 data-aos="fade" className="pt-20 tracking-wider text-4xl font-semibold text-white text-center">
+          <h1
+            data-aos="fade"
+            className="pt-20 tracking-wider text-4xl font-semibold text-white text-center"
+          >
             Sobre nós
           </h1>
           {/* card section */}
-          <div data-aos="fade" data-aos-delay="300"  className="bg-white/80 p-10 my-10">
-            No coração da nossa marca está uma profissional multifacetada com
-            vasta experiência e habilidades em moda, estilo, design,
-            desenvolvimento de programas e terapias inovadoras. Com 47 anos, mãe
-            dedicada de um rapaz de 12, ela combina paciência, carinho,
-            criatividade e atenção aos detalhes. Sua abordagem integra moda,
-            tecnologia e bem-estar, apoiada por suas formações além de
-            especializações em fullstack, MBA em gerência de marketing e
-            técnicas de programação neurolinguística e hipnose. Cada projeto é
-            conduzido com simpatia, educação e um toque divertido, refletindo
-            seu compromisso sincero com o bem-estar e a satisfação de todos que
-            fazem parte do processo.
+          <div
+            data-aos="fade"
+            data-aos-delay="300"
+            className="bg-white/80 p-10 my-10"
+          >
+            No coração da nossa marca
+            está uma profissional multifacetada. Sua abordagem integra moda,
+            tecnologia e bem-estar, combinando paciência, carinho, criatividade
+            e atenção aos detalhes. Cada projeto é conduzido com simpatia e
+            educação, refletindo seu compromisso sincero com a qualidade de vida e a
+            realização pessoal de todos que fazem parte do processo. 🌟
             <div className="pt-10 flex justify-center">
               <button
                 onClick={HandlePopup}
