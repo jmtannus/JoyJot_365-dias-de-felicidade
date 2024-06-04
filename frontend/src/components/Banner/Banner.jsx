@@ -10,7 +10,7 @@ const Banner = () => {
   return (
     <>
       <div className="container py-14 relative">
-        <div className="relative z-20">
+        <div className="relative z-20 mx-6">
           <h1
             data-aos="fade-up"
             data-aos-delay="300"
