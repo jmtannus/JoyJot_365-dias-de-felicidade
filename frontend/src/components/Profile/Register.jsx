@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebook, FaGoogle, FaInstagram } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 
-const Register = ({ showREPopup, setShowPopup }) => {
+const Register = ({ showPopup, setShowPopup }) => {
   return (
     <>
       {showPopup && (

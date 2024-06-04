@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCaretDown, FaUser, FaArrowRight } from "react-icons/fa";
+import { FaCaretDown, FaUser} from "react-icons/fa";
 import Logo from "../../assets/logo.png";
 
 const NavLinks = [
@@ -43,7 +43,7 @@ const DropdownLinks = [
   },
 ];
 
-const Navbar = ({ HandlePopup }) => {
+const Navbar = ({ HandlePopup, HandleRegister }) => {
   return (
     <>
       <div data-aos="fade" className="bg-white shadow-md gap-2">
@@ -123,7 +123,7 @@ const Navbar = ({ HandlePopup }) => {
 
                   {/* Register button section */}
                   <button
-                    onClick={ProfileForm}
+                    onClick={HandleRegister}
                     className="flex justify-center 
                   items-center gap-2 bg-secondaryDark 
                   text-base h-[35px] text-white px-2 

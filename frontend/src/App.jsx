@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import About from "./components/About/About.jsx";
 import Benefits from "./components/Benefits/Benefits.jsx";
 import PopUp from "./components/PopUp/PopUp.jsx";
+import Register from "./components/Profile/Register.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css"
 
@@ -13,6 +14,11 @@ const App = () => {
   const [showPopup, setShowPopup] = React.useState(false);
   const HandlePopup = () => {
     setShowPopup(true);
+  };
+
+  const [showRegister, setShowRegister] = React.useState(false);
+  const HandleRegister = () => {
+    setShowRegister(true);
   };
 
   React.useEffect(() => {
@@ -27,7 +33,7 @@ const App = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <Navbar HandlePopup={HandlePopup} />
+      <Navbar HandlePopup={HandlePopup} HandleRegister={HandleRegister} />
       <Hero />
       <Banner />
       <Benefits />
@@ -35,6 +41,7 @@ const App = () => {
       <Banner />
       <Footer />
       <PopUp showPopup={showPopup} setShowPopup={setShowPopup} />
+      <Register showPopup={showRegister} setShowPopup={setShowRegister} />
     </div>
   );
 };
