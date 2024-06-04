@@ -6,7 +6,10 @@ import Footer from "./components/Footer/Footer.jsx";
 import About from "./components/About/About.jsx";
 import Benefits from "./components/Benefits/Benefits.jsx";
 import PopUp from "./components/PopUp/PopUp.jsx";
-import Register from "./components/Profile/Register.jsx";
+import Register from "./components/Register/Register.jsx";
+import PolicyAndTerms from "./components/PolicyAndTerms/PolicyAndTerms.jsx";
+import BasicForm from "./components/Register/BasicForm.jsx"
+import Form from "./components/Register/Form.jsx"
 import AOS from "aos";
 import "aos/dist/aos.css"
 
@@ -19,6 +22,11 @@ const App = () => {
   const [showRegister, setShowRegister] = React.useState(false);
   const HandleRegister = () => {
     setShowRegister(true);
+  };
+
+  const [showPolicy, setShowPolicy] = React.useState(false);
+  const HandlePolicy = () => {
+    setShowPolicy(true);
   };
 
   React.useEffect(() => {
@@ -42,6 +50,7 @@ const App = () => {
       <Footer />
       <PopUp showPopup={showPopup} setShowPopup={setShowPopup} />
       <Register showPopup={showRegister} setShowPopup={setShowRegister} />
+      <PolicyAndTerms showPopup={showPolicy} setShowPopup={setShowPolicy} />
     </div>
   );
 };
