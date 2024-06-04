@@ -1,5 +1,7 @@
 import React from "react";
 import { FaCaretDown, FaUser } from "react-icons/fa";
+import Logo from "../../assets/logo.png";
+import { useRegisterPopup } from "../Register/Register";
 
 const NavLinks = [
   {
@@ -43,11 +45,27 @@ const DropdownLinks = [
 ];
 
 const Navbar = ({ HandlePopup }) => {
+  // Adiciona estado para controlar a visibilidade do popup de registro
+  const { showPopup, setShowPopup } = useRegisterPopup();
+
+  // Função para abrir o popup de registro
+  const handleOpenRegisterPopup = () => {
+    setShowPopup(true);
+  };
+
+  // Função para fechar o popup de registro
+  const handleCloseRegisterPopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <>
-      <div data-aos="fade" className="bg-white shadow-md">
+      <div data-aos="fade" className="bg-white shadow-md gap-2">
         <div className="container flex justify-between py-4 sm:py-3">
           {/* logo section */}
+          <a href="#">
+            <img src={Logo} alt="Logo" className="w-12" />
+          </a>
           <div className="font-bold text-3xl">
             JoyJot{" "}
             <span className=" hidden md:blocktext-sm justify-center text-secondary">
@@ -55,6 +73,7 @@ const Navbar = ({ HandlePopup }) => {
             </span>
             <span className="text-base justify-center text-yellow-400">:D</span>
           </div>
+
           {/* navlinks section */}
           <div>
             <ul className="flex items-center gap-10">
@@ -62,7 +81,7 @@ const Navbar = ({ HandlePopup }) => {
                 <li key={id}>
                   <a
                     href={link}
-                    className="hidden sm:inline-block
+                    className="sm:inline-block
                     hover:text-primary text-sm
                     font-semibold"
                   >
@@ -90,13 +109,13 @@ const Navbar = ({ HandlePopup }) => {
                 {/* Dropdown section */}
                 <div className="absolute z-[9999] hidden group-hover:block w-[200px] bg-white text-black shadow-md">
                   <ul>
-                    {DropdownLinks.map((id, name, link) => (
-                      <li key={id}>
+                    {DropdownLinks.map((item, index) => (
+                      <li key={item.id}>
                         <a
-                          href={link}
+                          href={item.link}
                           className="text-sm inline-block w-full rounded-md p-2 hover:bg-primary/20"
                         >
-                          {name}
+                          {item.name}
                         </a>
                       </li>
                     ))}
@@ -107,17 +126,35 @@ const Navbar = ({ HandlePopup }) => {
               <li>
                 <button
                   onClick={HandlePopup}
-                  className="flex justify-center items-center gap-2 bg-secondary text-base h-[40px] text-white px-2 md:px-5 py-2 hover:scale-105 duration-300"
+                  className="flex justify-center 
+                  items-center gap-2 bg-secondary 
+                  text-base h-[35px] text-white px-2 
+                  md:px-6 py-5 hover:scale-105 duration-300"
                 >
                   <FaUser />
                   Minha Conta
                 </button>
               </li>
             </ul>
+            {/* Register button section */}
+            <li>
+              <button
+                onClick={handleOpenRegisterPopup}
+                className="flex justify-center 
+                  items-center gap-2 bg-secondary 
+                  text-base h-[35px] text-white px-2 
+                  md:px-6 py-5 hover:scale-105 duration-300"
+              >
+                <FaUser />
+                Cadastre-se
+              </button>
+            </li>
             {/* Dropdown section and links */}
           </div>
         </div>
       </div>
+      {/* Renderiza o componente Register condicionalmente */}
+      {showPopup && <Register onClose={handleCloseRegisterPopup} />}
     </>
   );
 };
