@@ -19,21 +19,20 @@ const Hero = () => {
         <div className="container py-16 sm:py-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center min-h-[600px]">
             {/* text-content section */}
-            <div className="space-y-7 text-dark order-2 sm:order-1">
+            <div className="space-y-7 text-secondDark order-2 sm:order-1 mx-3">
               <h1 data-aos="fade-up" className="text-4xl text-center">
                 {" "}
-                <span className="text-secondary font-cursive text-6xl">
-                  Jot
+                <span className="text-light font-cursive text-7xl">
+                  Jot 
                 </span>{" "}
-                down the{" "}
-                <span className="text-secondary font-cursive text-6xl "><br></br>
+                 down the {" "}
+                <span className="text-light font-cursive text-7xl ">
                   Joy
                 </span>{" "}
-                moments
+                 moments
               </h1>
               <p data-aos="fade-up" data-aos-delay="300" className="lg:pr-64 text-left px-30">
-                Registre os momentos que te fizeram sorrir hoje e sorria
-                quando relembrá-los.
+                Registre os momentos que te fizeram feliz hoje e sorria quando relembrá-los.
               </p>
 
               {/* button section */}

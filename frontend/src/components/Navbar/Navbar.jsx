@@ -1,7 +1,6 @@
 import React from "react";
-import { FaCaretDown, FaUser } from "react-icons/fa";
+import { FaCaretDown, FaUser, FaArrowRight } from "react-icons/fa";
 import Logo from "../../assets/logo.png";
-import { useRegisterPopup } from "../Register/Register";
 
 const NavLinks = [
   {
@@ -45,38 +44,24 @@ const DropdownLinks = [
 ];
 
 const Navbar = ({ HandlePopup }) => {
-  // Adiciona estado para controlar a visibilidade do popup de registro
-  const { showPopup, setShowPopup } = useRegisterPopup();
-
-  // Função para abrir o popup de registro
-  const handleOpenRegisterPopup = () => {
-    setShowPopup(true);
-  };
-
-  // Função para fechar o popup de registro
-  const handleCloseRegisterPopup = () => {
-    setShowPopup(false);
-  };
-
   return (
     <>
       <div data-aos="fade" className="bg-white shadow-md gap-2">
-        <div className="container flex justify-between py-4 sm:py-3">
+        <div className="container flex justify-between py-1 sm:py-3">
           {/* logo section */}
           <a href="#">
             <img src={Logo} alt="Logo" className="w-12" />
           </a>
           <div className="font-bold text-3xl">
             JoyJot{" "}
-            <span className=" hidden md:blocktext-sm justify-center text-secondary">
-              365 dias de felicidade{" "}
+            <span className="md:blocktext-sm justify-center text-secondary text-base m-1">
+              365 dias de felicidade <span className="text-yellow-400">:D</span>
             </span>
-            <span className="text-base justify-center text-yellow-400">:D</span>
           </div>
 
           {/* navlinks section */}
           <div>
-            <ul className="flex items-center gap-10">
+            <ul className="flex items-center gap-6">
               {NavLinks.map(({ id, name, link }) => (
                 <li key={id}>
                   <a
@@ -107,7 +92,7 @@ const Navbar = ({ HandlePopup }) => {
                 </a>
 
                 {/* Dropdown section */}
-                <div className="absolute z-[9999] hidden group-hover:block w-[200px] bg-white text-black shadow-md">
+                <div className="absolute z-[9999] hidden group-hover:block w-[200px] bg-white text-black shadow-md p-2">
                   <ul>
                     {DropdownLinks.map((item, index) => (
                       <li key={item.id}>
@@ -123,38 +108,37 @@ const Navbar = ({ HandlePopup }) => {
                 </div>
               </li>
               {/* Login button section */}
-              <li>
-                <button
-                  onClick={HandlePopup}
-                  className="flex justify-center 
+              <li className="flex items-center gap-2">
+                <div className="flex items-center group">
+                  <button
+                    onClick={HandlePopup}
+                    className="flex justify-center 
                   items-center gap-2 bg-secondary 
                   text-base h-[35px] text-white px-2 
-                  md:px-6 py-5 hover:scale-105 duration-300"
-                >
-                  <FaUser />
-                  Minha Conta
-                </button>
+                  md:px-3 py-2 rounded-s-md hover:scale-105 duration-300"
+                  >
+                    <FaUser />
+                    Minha Conta
+                  </button>
+
+                  {/* Register button section */}
+                  <button
+                    onClick={ProfileForm}
+                    className="flex justify-center 
+                  items-center gap-2 bg-secondaryDark 
+                  text-base h-[35px] text-white px-2 
+                  md:px-3 py-2 rounded-e-md group-hover:!translate-x-2 duration-300"
+                  >
+                    Cadastre-se
+                  </button>
+                </div>
               </li>
             </ul>
-            {/* Register button section */}
-            <li>
-              <button
-                onClick={handleOpenRegisterPopup}
-                className="flex justify-center 
-                  items-center gap-2 bg-secondary 
-                  text-base h-[35px] text-white px-2 
-                  md:px-6 py-5 hover:scale-105 duration-300"
-              >
-                <FaUser />
-                Cadastre-se
-              </button>
-            </li>
             {/* Dropdown section and links */}
           </div>
         </div>
       </div>
-      {/* Renderiza o componente Register condicionalmente */}
-      {showPopup && <Register onClose={handleCloseRegisterPopup} />}
+      {/* Renderiza o componente Register condicionalmente: {showPopup && <Register onClose={setShowPopup} />}*/}
     </>
   );
 };
