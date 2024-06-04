@@ -1,8 +1,8 @@
 import React from "react";
-import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { FaFacebook, FaGoogle, FaInstagram } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 
-const PopUp = ({ showPopup, setShowPopup }) => {
+const Register = ({ showREPopup, setShowPopup }) => {
   return (
     <>
       {showPopup && (
@@ -19,7 +19,7 @@ const PopUp = ({ showPopup, setShowPopup }) => {
               {/* header section */}
               <div className="flex items-center justify-between">
                 <div>
-                  <h1 className="text-2xl font-bold text-dark">Login</h1>
+                  <h1 className="text-2xl font-bold text-dark">Inscreva-se</h1>
                 </div>
                 <div>
                   <IoCloseOutline
@@ -29,16 +29,32 @@ const PopUp = ({ showPopup, setShowPopup }) => {
                 </div>
               </div>
 
-              {/* login form section */}
+              {/* Register form section */}
               <div className="mt-4">
                 <input
+                  type="avatar"
+                  placeholder=" Foto "
+                  className="text-center rounded-md border border-gray-300 dark:border-gray-500 py-7 mb-4 w-3/12"
+                  onClick={() => setShowPopup(false)}
+                />
+                <input
+                  type="nome"
+                  placeholder=" Nome Completo"
+                  className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
+                />
+                <input
                   type="email"
-                  placeholder=" Entre com seu e-mail"
+                  placeholder=" E-mail"
                   className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                 />
                 <input
                   type="password"
-                  placeholder=" * * * * * "
+                  placeholder=" Criar Senha "
+                  className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
+                />
+                <input
+                  type="password"
+                  placeholder=" Confirmar Senha "
                   className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                 />
 
@@ -48,15 +64,20 @@ const PopUp = ({ showPopup, setShowPopup }) => {
                     className="w-full rounded-md flex justify-center items-center gap-2 bg-primary text-lg h-[40px] text-white px-5 py-2 hover:scale-105 duration-300"
                     onClick={() => setShowPopup(false)}
                   >
-                    Entrar
+                    Cadastre-se
                   </button>
+                  {/* Forgot password?  */}
+                  <p className="text-xs text-primaryDark/40 text-center mt-1">
+                    Esqueceu a senha?
+                  </p>
                 </div>
 
                 {/* social login */}
                 <div className="mt-4">
-                  <p className="text-center">ou entre com: </p>
+                  <p className="text-center text-base">ou entre com: </p>
                   <div className="flex justify-center gap-2 mt-2">
                     <FaFacebook className="text-3xl hover:text-blue-500 duration-200" />
+                    <FaInstagram className="text-3xl hover:text-primary duration-200" />
                     <FaGoogle className="text-3xl hover:text-primary duration-200" />
                   </div>
                 </div>
@@ -68,6 +89,12 @@ const PopUp = ({ showPopup, setShowPopup }) => {
                   <h1 className="py-4 text-2xl font-bold text-dark">
                     Zona Perigosa
                   </h1>
+                  <button
+                    className="flex  bg-white text-lg text-primaryDark py-2 hover:scale-105 duration-300"
+                    onClick={() => setShowPopup(false)}
+                  >
+                    Delete a Conta
+                  </button>
                   <button
                     className="bg-white text-lg text-primaryDark hover:scale-105 duration-300"
                     onClick={() => setShowPopup(false)}
@@ -84,4 +111,4 @@ const PopUp = ({ showPopup, setShowPopup }) => {
   );
 };
 
-export default PopUp;
+export default Register;
