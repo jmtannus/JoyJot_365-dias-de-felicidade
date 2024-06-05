@@ -55,7 +55,7 @@ export default function AppRouter() {
         <Route path="/bloco" element={<Bloco />} />
       </Routes>
       <About HandlePopup={HandlePopup} />
-      <Footer HandlePolicy={HandlePolicy} />
+      <Footer HandlePolicy={HandlePolicy} HandleTerms={HandleTerms} />
       
       <PopUp showPopup={showPopup} setShowPopup={setShowPopup} />
       <Register showPopup={showRegister} setShowPopup={setShowRegister} />
