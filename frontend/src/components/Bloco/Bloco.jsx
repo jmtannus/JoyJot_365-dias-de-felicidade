@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroImg from "./../../assets/hero.png";
 import HeroBg from "./../../assets/heroBg.png";
-import SecondaryButton from "../Shared/SecondaryButton";
+import { FaArrowRight } from "react-icons/fa";
 
 const BgStyle = {
   backgroundImage: `url(${HeroBg})`,
@@ -13,6 +13,16 @@ const BgStyle = {
 };
 
 const Bloco = () => {
+  const [input1, setInput1] = useState("");
+  const [input2, setInput2] = useState("");
+  const [input3, setInput3] = useState("");
+  const [finalText, setFinalText] = useState("");
+
+  const handleConcatenate = () => {
+    const concatenatedText = `1: ${input1}\n2: ${input2}\n3: ${input3}`;
+    setFinalText(concatenatedText);
+  };
+
   return (
     <>
       <div style={BgStyle} className="relative">
@@ -41,21 +51,43 @@ const Bloco = () => {
                 <div className="mt-4">
                   <input
                     type="text"
+                    value={input1}
+                    onChange={(e) => setInput1(e.target.value)}
+                    placeholder="Insira o texto aqui"
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4 p-1"
+                  />
+                  <input
+                    type="text"
+                    value={input2}
+                    onChange={(e) => setInput2(e.target.value)}
                     placeholder="Insira o texto aqui"
                     className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                   />
                   <input
                     type="text"
-                    placeholder="Insira o texto aqui"
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
-                  />
-                  <input
-                    type="text"
+                    value={input3}
+                    onChange={(e) => setInput3(e.target.value)}
                     placeholder="Insira o texto aqui"
                     className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                   />
                 </div>
-                <SecondaryButton />
+                <div className="flex items-center group">
+                  <button className="bg-secondary text-center w-3/12 h-[40px] text-white px-3 py-2 rounded-s-md"
+                    onClick={handleConcatenate}> 
+                    Enviar
+                    </button>
+                    <FaArrowRight className="inline-block rounded-e-md group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-secondaryDark text-white" />
+                </div>
+
+                {/* Salvando em uma caixa de texto após clicar em um botão */}
+                <div className="mt-4">
+                  <textarea
+                    className="border p-1 w-full"
+                    rows="4"
+                    value={finalText}
+                    readOnly
+                  />
+                </div>
               </div>
             </div>
             {/* Image section */}
