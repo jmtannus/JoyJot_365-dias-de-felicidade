@@ -67,9 +67,9 @@ const Register = ({ showPopup, setShowPopup }) => {
                     Cadastre-se
                   </button>
                   {/* Forgot password?  */}
-                  <p className="text-xs text-primaryDark/40 text-center mt-1">
+                  <a href="" className="text-xs text-primaryDark/40 text-center mt-1">
                     Esqueceu a senha?
-                  </p>
+                  </a>
                 </div>
 
                 {/* social login */}

@@ -1,5 +1,4 @@
 import React from "react";
-import { FaFacebook, FaGoogle, FaInstagram } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 
 const PolicyAndTerms = ({ showPopup, setShowPopup }) => {
@@ -7,96 +6,212 @@ const PolicyAndTerms = ({ showPopup, setShowPopup }) => {
     <>
       {showPopup && (
         <div>
-          <div
-            className="h-screen w-screen fixed top-0 left-0
-            bg-black/50 z-50 backdrop-blur-sm"
-          >
-            <div
-              className="fixed top-1/2 left-1/2 
-                -translate-x-1/2 -translate-y-1/2 p-4
-                 shadow-md bg-white rounded-md duration-200 w-[300px]"
-            >
+          <div className="h-screen w-screen fixed top-0 left-0 bg-black/50 z-50 backdrop-blur-sm">
+            <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 shadow-md bg-white rounded-md duration-200 w-[300px]">
               {/* header section */}
               <div className="flex items-center justify-between">
                 <div>
-                  <h1 className="text-2xl font-bold text-dark">Inscreva-se</h1>
-                </div>
-                <div>
+                  <h1 className="text-2xl font-bold text-dark">
+                    Política e Privacidade
+                  </h1>
                   <IoCloseOutline
                     className="text-2xl cursor-pointer font-bold"
                     onClick={() => setShowPopup(false)}
                   />
                 </div>
               </div>
-
-              {/* PolicyAndTerms form section */}
-              <div className="mt-4">
-                <input
-                  type="avatar"
-                  placeholder=" Foto "
-                  className="text-center rounded-md border border-gray-300 dark:border-gray-500 py-7 mb-4 w-3/12"
-                  onClick={() => setShowPopup(false)}
-                />
-                <input
-                  type="nome"
-                  placeholder=" Nome Completo"
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
-                />
-                <input
-                  type="email"
-                  placeholder=" E-mail"
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
-                />
-                <input
-                  type="password"
-                  placeholder=" Criar Senha "
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
-                />
-                <input
-                  type="password"
-                  placeholder=" Confirmar Senha "
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
-                />
-
-                {/* login button section */}
-                <div>
-                  <button
-                    className="w-full rounded-md flex justify-center items-center gap-2 bg-primary text-lg h-[40px] text-white px-5 py-2 hover:scale-105 duration-300"
-                    onClick={() => setShowPopup(false)}
+              {/* Privacy Policy */}
+              <div>
+                <h2>
+                  <span style="color: rgb(68, 68, 68)">
+                    Política Privacidade
+                  </span>
+                </h2>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    A sua privacidade é importante para nós. É política do
+                    JoyJot 365 dias de felicidade respeitar a sua privacidade em
+                    relação a qualquer informação sua que possamos coletar no
+                    site
+                    <a href="https://jmtannus-portfolio.netlify.app">
+                      JoyJot 365 dias de felicidade
+                    </a>
+                    , e outros sites que possuímos e operamos.
+                  </span>
+                </p>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    Solicitamos informações pessoais apenas quando realmente
+                    precisamos delas para lhe fornecer um serviço. Fazemo-lo por
+                    meios justos e legais, com o seu conhecimento e
+                    consentimento. Também informamos por que estamos coletando e
+                    como será usado.
+                  </span>
+                </p>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    Apenas retemos as informações coletadas pelo tempo
+                    necessário para fornecer o serviço solicitado. Quando
+                    armazenamos dados, protegemos dentro de meios comercialmente
+                    aceitáveis ​​para evitar perdas e roubos, bem como acesso,
+                    divulgação, cópia, uso ou modificação não autorizados.
+                  </span>
+                </p>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    Não compartilhamos informações de identificação pessoal
+                    publicamente ou com terceiros, exceto quando exigido por
+                    lei.
+                  </span>
+                </p>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    O nosso site pode ter links para sites externos que não são
+                    operados por nós. Esteja ciente de que não temos controle
+                    sobre o conteúdo e práticas desses sites e não podemos
+                    aceitar responsabilidade por suas respectivas&nbsp;
+                  </span>
+                  <a
+                    href="https://politicaprivacidade.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    style="background-color: transparent; color: rgb(68, 68, 68)"
                   >
-                    Cadastre-se
-                  </button>
-                  {/* Forgot password?  */}
-                  <p className="text-xs text-primaryDark/40 text-center mt-1">
-                    Esqueceu a senha?
-                  </p>
-                </div>
-
-                {/* social login */}
-                <div className="mt-4">
-                  <p className="text-center text-base">ou entre com: </p>
-                  <div className="flex justify-center gap-2 mt-2">
-                    <FaFacebook className="text-3xl hover:text-blue-500 duration-200" />
-                    <FaInstagram className="text-3xl hover:text-primary duration-200" />
-                    <FaGoogle className="text-3xl hover:text-primary duration-200" />
-                  </div>
-                </div>
-                {/* danger zone */}
-                <div>
-                <p className="w-full px-1 text-2xl text-center font-bold text-primaryDark/50">
-                  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-                  </p>
-                  <h1 className="py-4 text-2xl font-bold text-dark">
-                    Zona Perigosa
-                  </h1>
-                  <button
-                    className="bg-white text-lg text-primaryDark py-1 hover:scale-105 duration-300"
-                    onClick={() => setShowPopup(false)}
-                  >
-                    Delete a Conta
-                  </button>
-                </div>
+                    políticas de privacidade
+                  </a>
+                  <span style="color: rgb(68, 68, 68)">.</span>
+                </p>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    Você é livre para recusar a nossa solicitação de informações
+                    pessoais, entendendo que talvez não possamos fornecer alguns
+                    dos serviços desejados.
+                  </span>
+                </p>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    O uso continuado de nosso site será considerado como
+                    aceitação de nossas práticas em torno de privacidade e
+                    informações pessoais. Se você tiver alguma dúvida sobre como
+                    lidamos com dados do usuário e informações pessoais, entre
+                    em contacto connosco.
+                  </span>
+                </p>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    <ul>
+                      <li>
+                        <span style="color: rgb(68, 68, 68)">
+                          O serviço Google AdSense que usamos para veicular
+                          publicidade usa um cookie DoubleClick para veicular
+                          anúncios mais relevantes em toda a Web e limitar o
+                          número de vezes que um determinado anúncio é exibido
+                          para você.
+                        </span>
+                      </li>
+                      <li>
+                        <span style="color: rgb(68, 68, 68)">
+                          Para mais informações sobre o Google AdSense, consulte
+                          as FAQs oficiais sobre privacidade do Google AdSense.
+                        </span>
+                      </li>
+                      <li>
+                        <span style="color: rgb(68, 68, 68)">
+                          Utilizamos anúncios para compensar os custos de
+                          funcionamento deste site e fornecer financiamento para
+                          futuros desenvolvimentos. Os cookies de publicidade
+                          comportamental usados ​​por este site foram projetados
+                          para garantir que você forneça os anúncios mais
+                          relevantes sempre que possível, rastreando
+                          anonimamente seus interesses e apresentando coisas
+                          semelhantes que possam ser do seu interesse.
+                        </span>
+                      </li>
+                      <li>
+                        <span style="color: rgb(68, 68, 68)">
+                          Vários parceiros anunciam em nosso nome e os cookies
+                          de rastreamento de afiliados simplesmente nos permitem
+                          ver se nossos clientes acessaram o site através de um
+                          dos sites de nossos parceiros, para que possamos
+                          creditá-los adequadamente e, quando aplicável,
+                          permitir que nossos parceiros afiliados ofereçam
+                          qualquer promoção que pode fornecê-lo para fazer uma
+                          compra.
+                        </span>
+                      </li>
+                    </ul>
+                    <p>
+                      <br />
+                    </p>
+                  </span>
+                </p>
+                <h3>
+                  <span style="color: rgb(68, 68, 68)">
+                    Compromisso do Usuário
+                  </span>
+                </h3>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    O usuário se compromete a fazer uso adequado dos conteúdos e
+                    da informação que o JoyJot 365 dias de felicidade oferece no
+                    site e com caráter enunciativo, mas não limitativo:
+                  </span>
+                </p>
+                <ul>
+                  <li>
+                    <span style="color: rgb(68, 68, 68)">
+                      A) Não se envolver em atividades que sejam ilegais ou
+                      contrárias à boa fé a à ordem pública;
+                    </span>
+                  </li>
+                  <li>
+                    <span style="color: rgb(68, 68, 68)">
+                      B) Não difundir propaganda ou conteúdo de natureza
+                      racista, xenofóbica,{" "}
+                    </span>
+                    <span style="color: rgb(33, 37, 41)">
+                      <a
+                        href="https://pixbetoficial.br.com"
+                        style="color: inherit !important; text-decoration: none !important; font-size: inherit !important;"
+                      >
+                        pixbet
+                      </a>
+                    </span>
+                    <span style="color: rgb(68, 68, 68)">
+                      ou azar, qualquer tipo de pornografia ilegal, de apologia
+                      ao terrorismo ou contra os direitos humanos;
+                    </span>
+                  </li>
+                  <li>
+                    <span style="color: rgb(68, 68, 68)">
+                      C) Não causar danos aos sistemas físicos (hardwares) e
+                      lógicos (softwares) do JoyJot 365 dias de felicidade, de
+                      seus fornecedores ou terceiros, para introduzir ou
+                      disseminar vírus informáticos ou quaisquer outros sistemas
+                      de hardware ou software que sejam capazes de causar danos
+                      anteriormente mencionados.
+                    </span>
+                  </li>
+                </ul>
+                <h3>
+                  <span style="color: rgb(68, 68, 68)">Mais informações</span>
+                </h3>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    Esperemos que esteja esclarecido e, como mencionado
+                    anteriormente, se houver algo que você não tem certeza se
+                    precisa ou não, geralmente é mais seguro deixar os cookies
+                    ativados, caso interaja com um dos recursos que você usa em
+                    nosso site.
+                  </span>
+                </p>
+                <p>
+                  <span style="color: rgb(68, 68, 68)">
+                    Esta política é efetiva a partir de&nbsp;3 June 2024 16:34
+                  </span>
+                </p>
               </div>
+              
             </div>
           </div>
         </div>

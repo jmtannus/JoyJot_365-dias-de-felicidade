@@ -3,7 +3,7 @@ import { FaPhone } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-const Footer = () => {
+const Footer = ({ HandlePolicy, HandleTerms }) => {
   return (
     <>
       <div className="text-white mt-20">
@@ -28,7 +28,7 @@ const Footer = () => {
                 <br /> CEP 60170-040, Fortaleza, Ceará, Brasil
               </p>
             </div>
-            
+
             {/* email section */}
             <div className="text-center space-y-4">
               <div className="flex justify-center">
@@ -46,18 +46,42 @@ const Footer = () => {
                 <FaPhone className="text-5xl" />
               </div>
               <div>
-                <p><span className="font-bold">Central de Apoio:</span><br></br>+55 85 99992.0399</p>
-                <p> <span className="font-bold">CVV:</span><br></br>+55 188</p>
-                <p><span className="font-bold">Ministério da Saúde - Atendimento às pessoas com transtornos mentais: </span>+55 85 196{" "}</p>
+                <p>
+                  <span className="font-bold">Central de Apoio:</span>
+                  <br></br>+55 85 99992.0399
+                </p>
+                <p>
+                  {" "}
+                  <span className="font-bold">CVV:</span>
+                  <br></br>+55 188
+                </p>
+                <p>
+                  <span className="font-bold">
+                    Ministério da Saúde - Atendimento às pessoas com transtornos
+                    mentais:{" "}
+                  </span>
+                  +55 85 196{" "}
+                </p>
               </div>
             </div>
           </div>
           {/* copyright section */}
           <div className="flex justify-between p-4 items-center">
             <p>@ 2024 JMT². Todos os Direitos Reservados</p>
+            {/* Privacity Policy and Terms section */}
             <div className="flex items-center gap-6">
-              <a href="#">Política de Privacidade</a>
-              <a href="#">Termos e Condições</a>
+              <button
+                className="py-1 hover:scale-105 duration-300"
+                onClick={HandlePolicy}
+              >
+                Política de Privacidade
+              </button>
+              <button
+                className="py-1 hover:scale-105 duration-300"
+                onClick={HandleTerms}
+              >
+                Termos e Condições
+              </button>
             </div>
           </div>
         </div>
