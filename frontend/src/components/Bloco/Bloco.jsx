@@ -2,9 +2,8 @@ import React from 'react'
 
 const Bloco = () => {
   return (<>
-    <div>Bloco</div>
-  </>
-    
+    <div className="font-bold text-xl">Bloco</div>
+  </>    
   )
 }
 

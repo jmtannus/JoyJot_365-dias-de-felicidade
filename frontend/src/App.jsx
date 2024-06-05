@@ -50,8 +50,6 @@ const App = () => {
   return (
     <div className="overflow-x-hidden">
       <Navbar HandlePopup={HandlePopup} HandleRegister={HandleRegister} />
-      <Bloco />
-
       <Hero />
       <Banner />
       <Benefits />
@@ -62,7 +60,6 @@ const App = () => {
       <Register showPopup={showRegister} setShowPopup={setShowRegister} />
       <PolicyAndTerms showPopup={showPolicy} setShowPopup={setShowPolicy} />
       <Terms showPopup={showTerms} setShowPopup={setShowTerms} />
-      
     </div>
   );
 };
