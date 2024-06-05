@@ -15,11 +15,16 @@ const NavLinks = [
   },
   {
     id: 3,
+    name: "Bloco",
+    link: "/bloco",
+  },
+  {
+    id: 4,
     name: "Calendário",
     link: "/#",
   },
   {
-    id: 4,
+    id: 5,
     name: "Contato",
     link: "https://www.linkedin.com/in/janaina-tannus-58b32229",
   },
