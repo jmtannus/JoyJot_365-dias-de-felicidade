@@ -37,7 +37,6 @@ const Bloco = () => {
               </p>
               {/* Notes section */}
               <div data-aos="fade-up" data-aos-delay="500">
-                
                 {/* Register form section */}
                 <div className="mt-4">
                   <input
@@ -46,13 +45,13 @@ const Bloco = () => {
                     className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                   />
                   <input
-                    type="nome"
-                    placeholder=" Nome Completo"
+                    type="text"
+                    placeholder="Insira o texto aqui"
                     className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                   />
                   <input
-                    type="email"
-                    placeholder=" E-mail"
+                    type="text"
+                    placeholder="Insira o texto aqui"
                     className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                   />
                 </div>
