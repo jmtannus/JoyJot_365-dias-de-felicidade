@@ -51,12 +51,12 @@ const App = () => {
     <div className="overflow-x-hidden">
       <Navbar HandlePopup={HandlePopup} HandleRegister={HandleRegister} />
       <Bloco />
-      {/* <Hero />
+      <Hero />
       <Banner />
       <Benefits />
       <About HandlePopup={HandlePopup} />
       <Banner />
-      <Footer HandlePopup={HandlePolicy} /> */}
+      <Footer HandlePopup={HandlePolicy} />
       <PopUp showPopup={showPopup} setShowPopup={setShowPopup} />
       <Register showPopup={showRegister} setShowPopup={setShowRegister} />
       <PolicyAndTerms showPopup={showPolicy} setShowPopup={setShowPolicy} />
