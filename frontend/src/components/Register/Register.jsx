@@ -38,7 +38,7 @@ const Register = ({ showPopup, setShowPopup }) => {
                   onClick={() => setShowPopup(false)}
                 />
                 <input
-                  type="nome"
+                  type="name"
                   placeholder=" Nome Completo"
                   className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                 />
