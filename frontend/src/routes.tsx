@@ -14,6 +14,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import About from "./components/About/About";
 import Banner from "./components/Banner/Banner";
+import Calendario from "./components/Calendario/Calendario";
 
 export default function AppRouter() {
 
@@ -55,6 +56,7 @@ export default function AppRouter() {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/bloco" element={<Bloco />} />
+        <Route path="/calendario" element={<Calendario />} />
       </Routes>
       <Banner/>
       <About HandlePopup={HandlePopup} />

@@ -21,7 +21,7 @@ const NavLinks = [
   {
     id: 4,
     name: "Calendário",
-    link: "/#",
+    link: "/calendario",
   },
   {
     id: 5,
