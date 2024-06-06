@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import HeroImg from "./../../assets/hero.png";
 import HeroBg from "./../../assets/heroBg.png";
 import { FaArrowRight } from "react-icons/fa";
@@ -14,30 +15,27 @@ const BgStyle = {
 };
 
 const Bloco = () => {
+  // Estados para os inputs e texto final: 
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [input3, setInput3] = useState("");
-  const [finalText, setFinalText] = useState("");
-  const [textsArray, setTextsArray] = useState([]);
-  const [dateTexts, setDateTexts] = useState({});
-  const [selectedDate, setSelectedDate] = useState(new Date());
 
+  // Estado para a data selecionada:
+  const [date, setDate] = useState(new Date());
+
+  // Estado para armazenar os textos por data: 
+  const [dateTexts, setDateTexts] = useState({});
+
+  // Função para concatenar os textos: 
   const handleConcatenate = () => {
-    const concatenatedText = `${input1}\n${input2}\n${input3}`;
-    setFinalText(concatenatedText);
-    // Adiciona o novo texto concatenado ao array
-    setTextsArray([...textsArray, concatenatedText]);
-    // Armazena o texto concatenado com a data correspondente
-    const dateKey = selectedDate.toISOString().split("T")[0];
+    const concatenatedText = `1- ${input1}\n2- ${input2}\n 3-${input3}`;
+    const dateKey = date.toISOString().split('T')[0];
     setDateTexts({ ...dateTexts, [dateKey]: concatenatedText });
   };
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-
+  
   return (
     <>
+ 
       <div style={BgStyle} className="relative">
         <div className="container py-16 sm:py-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center min-h-[600px]">
@@ -54,8 +52,7 @@ const Bloco = () => {
               <p
                 data-aos="fade-up"
                 data-aos-delay="300"
-                className="text-green-950 text-lg font-medium lg:pr-6 text-left px-30"
-              >
+                className="text-green-950 text-lg font-medium lg:pr-6 text-left px-30">
                 Três momentos que valem a pena relembrar:
               </p>
               {/* Notes section */}
@@ -88,31 +85,26 @@ const Bloco = () => {
                   <div className="flex items-center group">
                     <button
                       className="bg-secondary text-center w-3/12 h-[40px] text-white px-3 py-2 rounded-s-md"
-                      onClick={handleConcatenate}
-                    >
+                      onClick={handleConcatenate}>
                       Enviar
                     </button>
                     <FaArrowRight className="inline-block rounded-e-md group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-secondaryDark text-white" />
                   </div>
-                  {/* calendar section */}
-
-                  <Calendar
-                    onChange={handleDateChange}
-                    value={selectedDate}
-                    tileContent={({ date, view }) => {
-                      // Formata a data para corresponder à chave do objeto dateTexts
-                      const dateKey = date.toISOString().split("T")[0];
-                      // Retorna o texto para a data, se houver
-                      return view === "month" && dateTexts[dateKey] ? (
-                        <div className="text-xs p-1 bg-blue-100 rounded">
-                          {dateTexts[dateKey]}
-                        </div>
-                      ) : null;
-                    }}
-                  />
-                </div>                
+                </div>
+                        {/* calendar section */}
+        <div className="flex justify-between">
+          <div className="w-2/3 p-4"><Calendar onChange={setDate} value={date} /></div>
+                  
+        {/* Caixa de texto */}
+        <div className="w-2/3 p-4 bg-gray-100 rounded-lg shadow">
+        <p className="text-lg font-semibold mb-2">Conteúdo do Dia:</p>
+        <textarea className="w-full h-40 p-2 border rounded" value={dateTexts[date.toISOString().split('T')[0]] || 'Nenhum texto para esta data'}
+         readOnly/></div>
+       </div>
               </div>
             </div>
+            
+
             {/* Image section */}
             <div className="z-30 order-1 sm:order-2">
               <img
@@ -121,6 +113,7 @@ const Bloco = () => {
                 className="w-full sm:scale-100 -my-10  sm:translate-y-3"
               />
             </div>
+
           </div>
         </div>
       </div>
