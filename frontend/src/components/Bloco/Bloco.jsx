@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Calendar from "react-calendar";
 import HeroImg from "./../../assets/hero.png";
 import HeroBg from "./../../assets/heroBg.png";
 import { FaArrowRight } from "react-icons/fa";
@@ -17,14 +18,22 @@ const Bloco = () => {
   const [input2, setInput2] = useState("");
   const [input3, setInput3] = useState("");
   const [finalText, setFinalText] = useState("");
-
   const [textsArray, setTextsArray] = useState([]);
+  const [dateTexts, setDateTexts] = useState({});
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleConcatenate = () => {
-    const concatenatedText = `1: ${input1}\n2: ${input2}\n3: ${input3}`;
+    const concatenatedText = `${input1}\n${input2}\n${input3}`;
     setFinalText(concatenatedText);
     // Adiciona o novo texto concatenado ao array
     setTextsArray([...textsArray, concatenatedText]);
+    // Armazena o texto concatenado com a data correspondente
+    const dateKey = selectedDate.toISOString().split("T")[0];
+    setDateTexts({ ...dateTexts, [dateKey]: concatenatedText });
+  };
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
   };
 
   return (
@@ -52,6 +61,7 @@ const Bloco = () => {
               {/* Notes section */}
               <div data-aos="fade-up" data-aos-delay="500">
                 {/* Register form section */}
+                {/* renderização dos inputs e botão */}
                 <div className="mt-3">
                   <input
                     type="text"
@@ -74,26 +84,33 @@ const Bloco = () => {
                     placeholder="Insira o texto aqui"
                     className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
                   />
-                </div>
-                <div className="flex items-center group">
-                  <button
-                    className="bg-secondary text-center w-3/12 h-[40px] text-white px-3 py-2 rounded-s-md"
-                    onClick={handleConcatenate}
-                  >
-                    Enviar
-                  </button>
-                  <FaArrowRight className="inline-block rounded-e-md group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-secondaryDark text-white" />
-                </div>
 
-                {/* Salvando em uma caixa de texto após clicar em um botão */}
-                <div className="mt-4">
-                  <textarea
-                    className="border p-1 w-full"
-                    rows="6"
-                    value={finalText}
-                    readOnly
+                  <div className="flex items-center group">
+                    <button
+                      className="bg-secondary text-center w-3/12 h-[40px] text-white px-3 py-2 rounded-s-md"
+                      onClick={handleConcatenate}
+                    >
+                      Enviar
+                    </button>
+                    <FaArrowRight className="inline-block rounded-e-md group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-secondaryDark text-white" />
+                  </div>
+                  {/* calendar section */}
+
+                  <Calendar
+                    onChange={handleDateChange}
+                    value={selectedDate}
+                    tileContent={({ date, view }) => {
+                      // Formata a data para corresponder à chave do objeto dateTexts
+                      const dateKey = date.toISOString().split("T")[0];
+                      // Retorna o texto para a data, se houver
+                      return view === "month" && dateTexts[dateKey] ? (
+                        <div className="text-xs p-1 bg-blue-100 rounded">
+                          {dateTexts[dateKey]}
+                        </div>
+                      ) : null;
+                    }}
                   />
-                </div>
+                </div>                
               </div>
             </div>
             {/* Image section */}
