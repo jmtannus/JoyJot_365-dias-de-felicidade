@@ -18,9 +18,13 @@ const Bloco = () => {
   const [input3, setInput3] = useState("");
   const [finalText, setFinalText] = useState("");
 
+  const [textsArray, setTextsArray] = useState([]);
+
   const handleConcatenate = () => {
     const concatenatedText = `1: ${input1}\n2: ${input2}\n3: ${input3}`;
     setFinalText(concatenatedText);
+    // Adiciona o novo texto concatenado ao array
+    setTextsArray([...textsArray, concatenatedText]);
   };
 
   return (
@@ -34,9 +38,9 @@ const Bloco = () => {
                 {" "}
                 O que te fez{" "}
                 <span className="text-white font-cursive text-9xl">
-                  sorrir 
+                  sorrir
                 </span>{" "}
-                 hoje?
+                hoje?
               </h1>
               <p
                 data-aos="fade-up"
@@ -72,18 +76,20 @@ const Bloco = () => {
                   />
                 </div>
                 <div className="flex items-center group">
-                  <button className="bg-secondary text-center w-3/12 h-[40px] text-white px-3 py-2 rounded-s-md"
-                    onClick={handleConcatenate}> 
+                  <button
+                    className="bg-secondary text-center w-3/12 h-[40px] text-white px-3 py-2 rounded-s-md"
+                    onClick={handleConcatenate}
+                  >
                     Enviar
-                    </button>
-                    <FaArrowRight className="inline-block rounded-e-md group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-secondaryDark text-white" />
+                  </button>
+                  <FaArrowRight className="inline-block rounded-e-md group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-secondaryDark text-white" />
                 </div>
 
                 {/* Salvando em uma caixa de texto após clicar em um botão */}
                 <div className="mt-4">
                   <textarea
                     className="border p-1 w-full"
-                    rows="4"
+                    rows="6"
                     value={finalText}
                     readOnly
                   />
