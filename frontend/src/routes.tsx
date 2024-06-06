@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Bloco from "./components/Bloco/Bloco";
+import Hero from "./components/Hero/Hero";
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import PopUp from "./components/PopUp/PopUp";
@@ -12,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import About from "./components/About/About";
+import Banner from "./components/Banner/Banner";
 
 export default function AppRouter() {
 
@@ -54,6 +56,7 @@ export default function AppRouter() {
         <Route path="/" element={<App />} />
         <Route path="/bloco" element={<Bloco />} />
       </Routes>
+      <Banner/>
       <About HandlePopup={HandlePopup} />
       <Footer HandlePolicy={HandlePolicy} HandleTerms={HandleTerms} />
       

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCaretDown, FaUser} from "react-icons/fa";
+import { FaCaretDown, FaUser } from "react-icons/fa";
 import Logo from "../../assets/logo.png";
 
 const NavLinks = [
@@ -51,22 +51,20 @@ const DropdownLinks = [
 const Navbar = ({ HandlePopup, HandleRegister }) => {
   return (
     <>
-      <div data-aos="fade" className="bg-white shadow-md gap-2">
-        <div className="container flex justify-between py-1 sm:py-3">
+      <div  className="bg-white shadow-md gap-36">
+        <div data-aos="fade" className="container flex justify-center py-1 sm:py-3">
           {/* logo section */}
-          <a href="#">
-            <img src={Logo} alt="Logo" className="w-12" />
-          </a>
-          <div className="font-bold text-3xl">
-            JoyJot{" "}
-            <span className="md:blocktext-sm justify-center text-secondary text-base m-1">
-              365 dias de felicidade <span className="text-yellow-400">:D</span>
-            </span>
+            <img src={Logo} alt="Logo" className="w-16 h-12 my-2" />
+          <div className="font-bold text-3xl hidden lg:block">
+            <p>JoyJot</p>
+            <p className="text-secondary text-sm hidden lg:block ">
+              365 dias de felicidade
+            </p>
           </div>
 
           {/* navlinks section */}
-          <div>
-            <ul className="flex items-center gap-6">
+          <div className="py-2 mx-2">
+            <ul className="flex mx-2 my-1 items-center gap-6">
               {NavLinks.map(({ id, name, link }) => (
                 <li key={id}>
                   <a
@@ -89,7 +87,7 @@ const Navbar = ({ HandlePopup, HandleRegister }) => {
                     font-semibold"
                 >
                   <div className="flex items-center gap-[2px] py-2">
-                    Dropdown
+                    +Motivos
                     <span>
                       <FaCaretDown className="group-hover:rotate-180 duration-300" />
                     </span>
@@ -119,8 +117,8 @@ const Navbar = ({ HandlePopup, HandleRegister }) => {
                     onClick={HandlePopup}
                     className="flex justify-center 
                   items-center gap-2 bg-secondary 
-                  text-base h-[35px] text-white px-2 
-                  md:px-3 py-2 rounded-s-md hover:scale-105 duration-300"
+                  text-sm h-[35px] text-white px-2 
+                  md:px-3 py-6 rounded-s-md hover:scale-105 duration-300"
                   >
                     <FaUser />
                     Minha Conta
@@ -129,10 +127,9 @@ const Navbar = ({ HandlePopup, HandleRegister }) => {
                   {/* Register button section */}
                   <button
                     onClick={HandleRegister}
-                    className="flex justify-center 
-                  items-center gap-2 bg-secondaryDark 
-                  text-base h-[35px] text-white px-2 
-                  md:px-3 py-2 rounded-e-md group-hover:!translate-x-2 duration-300"
+                    className="flex items-center gap-2 bg-secondaryDark 
+                  text-sm h-[35px] text-white px-2 
+                  md:px-3 py-6 rounded-e-md group-hover:!translate-x-2 duration-300"
                   >
                     Cadastre-se
                   </button>
