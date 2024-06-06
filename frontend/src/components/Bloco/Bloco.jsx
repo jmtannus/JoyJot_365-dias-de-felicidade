@@ -29,39 +29,39 @@ const Bloco = () => {
         <div className="container py-16 sm:py-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center min-h-[600px]">
             {/* text-content section */}
-            <div className="space-y-7 text-secondDark order-2 sm:order-1 mx-3">
+            <div className="space-y-4 text-Dark order-2 sm:order-1 mx-2">
               <h1 data-aos="fade-up" className="text-4xl text-center">
                 {" "}
                 O que te fez{" "}
                 <span className="text-white font-cursive text-9xl">
-                  sorrir
+                  sorrir 
                 </span>{" "}
-                hoje?
+                 hoje?
               </h1>
               <p
                 data-aos="fade-up"
                 data-aos-delay="300"
-                className="lg:pr-64 text-left px-30"
+                className="text-green-950 text-lg font-medium lg:pr-6 text-left px-30"
               >
-                Três momentos que vale a pena relembrar:
+                Três momentos que valem a pena relembrar:
               </p>
               {/* Notes section */}
               <div data-aos="fade-up" data-aos-delay="500">
                 {/* Register form section */}
-                <div className="mt-4">
+                <div className="mt-3">
                   <input
                     type="text"
                     value={input1}
                     onChange={(e) => setInput1(e.target.value)}
                     placeholder="Insira o texto aqui"
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4 p-1"
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-3"
                   />
                   <input
                     type="text"
                     value={input2}
                     onChange={(e) => setInput2(e.target.value)}
                     placeholder="Insira o texto aqui"
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
+                    className="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-3"
                   />
                   <input
                     type="text"
