@@ -14,6 +14,24 @@ const BgStyle = {
 };
 
 const Calendario = () => {
+  // Estados para os inputs e texto final: 
+  const [input1, setInput1] = useState("");
+  const [input2, setInput2] = useState("");
+  const [input3, setInput3] = useState("");
+
+  // Estado para a data selecionada:
+  const [date, setDate] = useState(new Date());
+
+  // Estado para armazenar os textos por data: 
+  const [dateTexts, setDateTexts] = useState({});
+
+  // Função para concatenar os textos: 
+  const handleConcatenate = () => {
+    const concatenatedText = `1- ${input1}\n2- ${input2}\n 3-${input3}`;
+    const dateKey = date.toISOString().split('T')[0];
+    setDateTexts({ ...dateTexts, [dateKey]: concatenatedText });
+  };
+  
   
   return (
     <>
