@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import HeroImg from "./../../assets/hero.png";
-import Bg from "./../../assets/bg.png";
-import { FaArrowRight } from "react-icons/fa";
+import bg from "./../../assets/bg.png";
 
 const BgStyle = {
   backgroundImage: `url(${bg})`,
@@ -14,7 +13,7 @@ const BgStyle = {
   height: "100%",
 };
 
-const Bloco = () => {
+const Calendario = () => {
   
   return (
     <>
@@ -43,7 +42,7 @@ const Bloco = () => {
                 {/* Caixa de texto */}
                 <div className="w-2/3 p-4 bg-gray-100 rounded-lg shadow">
                 <p className="text-base font-semibold mb-2">Conteúdo do Dia:</p>
-                <textarea className="w-full h-60 p-2 border rounded" value={dateTexts[date.toISOString().split('T')[0]] || 'Nenhum texto para esta data'}
+                <textarea className="h-40 p-2 border rounded" value={dateTexts[date.toISOString().split('T')[0]] || 'Nenhum texto para esta data'}
                 readOnly/></div>
               </div>
                       </div>
@@ -66,4 +65,4 @@ const Bloco = () => {
   );
 };
 
-export default Bloco;
+export default Calendario;
