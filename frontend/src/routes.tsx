@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Bloco from "./components/Bloco/Bloco";
-import Hero from "./components/Hero/Hero";
+// import Hero from "./components/Hero/Hero";
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import PopUp from "./components/PopUp/PopUp";
