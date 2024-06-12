@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Bloco from "./components/Bloco/Bloco";
