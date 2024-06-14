@@ -51,7 +51,7 @@ export default function AppRouter() {
   }, []);
   
   return (
-    <Router basename={import.meta.url}>
+    <Router basename={(import.meta as any).env.VITE_BASE_URL}>
       <Navbar HandlePopup={HandlePopup} HandleRegister={HandleRegister} />
       <Routes>
         <Route path="/" element={<App />} />
