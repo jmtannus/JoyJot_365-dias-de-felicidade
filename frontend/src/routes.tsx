@@ -51,7 +51,7 @@ export default function AppRouter() {
   }, []);
   
   return (
-    <Router>
+    <Router basename={import.meta.url}>
       <Navbar HandlePopup={HandlePopup} HandleRegister={HandleRegister} />
       <Routes>
         <Route path="/" element={<App />} />
