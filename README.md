@@ -1,4 +1,5 @@
-# [JoyJot](https://joyjot.netlify.app/)  💝 💝
+# [JoyJot](https://joyjot.netlify.app/)  💝
+
 
 ### Com algumas imagens geradas por IA 🤖 e icones by [React Icons](https://react-icons.github.io/react-icons/) 
 </br>
